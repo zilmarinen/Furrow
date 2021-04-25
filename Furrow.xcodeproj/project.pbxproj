@@ -3,10 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183CFA06260A132C00D9D6B8 /* Tilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA05260A132C00D9D6B8 /* Tilemap.swift */; };
+		183CFA0A260A136F00D9D6B8 /* FootpathTilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */; };
+		183CFA0D260A137700D9D6B8 /* SurfaceTilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */; };
+		183CFA10260A13D400D9D6B8 /* FootpathTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */; };
+		183CFA15260A141300D9D6B8 /* FootpathTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA14260A141300D9D6B8 /* FootpathTile.swift */; };
+		183CFA19260A14A300D9D6B8 /* SurfaceTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */; };
+		183CFA1C260A14B300D9D6B8 /* SurfaceEdgeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */; };
+		183CFA1F260A153B00D9D6B8 /* SurfaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */; };
+		183CFA22260A154200D9D6B8 /* SurfaceEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */; };
+		183CFA25260A222F00D9D6B8 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA24260A222F00D9D6B8 /* NSImage.swift */; };
+		188223F0260A0C0700189B95 /* Meadow in Frameworks */ = {isa = PBXBuildFile; productRef = 188223EF260A0C0700189B95 /* Meadow */; };
+		188223F3260A0C4800189B95 /* FootpathTileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188223F2260A0C4800189B95 /* FootpathTileType.swift */; };
 		18FE5F072609E64700860963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F062609E64700860963 /* AppDelegate.swift */; };
 		18FE5F092609E64700860963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F082609E64700860963 /* ViewController.swift */; };
 		18FE5F0B2609E64700860963 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F0A2609E64700860963 /* Document.swift */; };
@@ -22,6 +34,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		183CFA05260A132C00D9D6B8 /* Tilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tilemap.swift; sourceTree = "<group>"; };
+		183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTilemap.swift; sourceTree = "<group>"; };
+		183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTilemap.swift; sourceTree = "<group>"; };
+		183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileset.swift; sourceTree = "<group>"; };
+		183CFA14260A141300D9D6B8 /* FootpathTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTile.swift; sourceTree = "<group>"; };
+		183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTileset.swift; sourceTree = "<group>"; };
+		183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceEdgeset.swift; sourceTree = "<group>"; };
+		183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTile.swift; sourceTree = "<group>"; };
+		183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceEdge.swift; sourceTree = "<group>"; };
+		183CFA24260A222F00D9D6B8 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		188223EC260A0BC800189B95 /* Meadow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Meadow; path = ../Meadow; sourceTree = "<group>"; };
+		188223F2260A0C4800189B95 /* FootpathTileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileType.swift; sourceTree = "<group>"; };
 		18FE5F032609E64700860963 /* Furrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18FE5F062609E64700860963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18FE5F082609E64700860963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,17 +68,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188223F0260A0C0700189B95 /* Meadow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183CFA04260A132400D9D6B8 /* Tilemap */ = {
+			isa = PBXGroup;
+			children = (
+				183CFA12260A13D700D9D6B8 /* Footpath */,
+				183CFA13260A13DC00D9D6B8 /* Surface */,
+				183CFA05260A132C00D9D6B8 /* Tilemap.swift */,
+			);
+			path = Tilemap;
+			sourceTree = "<group>";
+		};
+		183CFA12260A13D700D9D6B8 /* Footpath */ = {
+			isa = PBXGroup;
+			children = (
+				183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */,
+				183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */,
+				183CFA14260A141300D9D6B8 /* FootpathTile.swift */,
+			);
+			path = Footpath;
+			sourceTree = "<group>";
+		};
+		183CFA13260A13DC00D9D6B8 /* Surface */ = {
+			isa = PBXGroup;
+			children = (
+				183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */,
+				183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */,
+				183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */,
+				183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */,
+				183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */,
+			);
+			path = Surface;
+			sourceTree = "<group>";
+		};
+		188223EE260A0C0700189B95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18FE5EFA2609E64700860963 = {
 			isa = PBXGroup;
 			children = (
+				188223EC260A0BC800189B95 /* Meadow */,
 				18FE5F052609E64700860963 /* Furrow */,
 				18FE5F042609E64700860963 /* Products */,
+				188223EE260A0C0700189B95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +135,7 @@
 		18FE5F052609E64700860963 /* Furrow */ = {
 			isa = PBXGroup;
 			children = (
+				183CFA04260A132400D9D6B8 /* Tilemap */,
 				18FE5F382609E9C200860963 /* Extensions */,
 				18FE5F1E2609E7F100860963 /* Document */,
 				18FE5F1C2609E7C200860963 /* Coordinators */,
@@ -171,6 +238,8 @@
 			children = (
 				18FE5F392609E9D100860963 /* NSStoryboard.swift */,
 				18FE5F3C2609E9F000860963 /* NSResponder.swift */,
+				188223F2260A0C4800189B95 /* FootpathTileType.swift */,
+				183CFA24260A222F00D9D6B8 /* NSImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +260,9 @@
 			dependencies = (
 			);
 			name = Furrow;
+			packageProductDependencies = (
+				188223EF260A0C0700189B95 /* Meadow */,
+			);
 			productName = Furrow;
 			productReference = 18FE5F032609E64700860963 /* Furrow.app */;
 			productType = "com.apple.product-type.application";
@@ -244,16 +316,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183CFA15260A141300D9D6B8 /* FootpathTile.swift in Sources */,
+				183CFA1C260A14B300D9D6B8 /* SurfaceEdgeset.swift in Sources */,
 				18FE5F2D2609E8C500860963 /* PatternViewCoordinator.swift in Sources */,
 				18FE5F3A2609E9D100860963 /* NSStoryboard.swift in Sources */,
+				183CFA25260A222F00D9D6B8 /* NSImage.swift in Sources */,
+				188223F3260A0C4800189B95 /* FootpathTileType.swift in Sources */,
 				18FE5F222609E86500860963 /* Coordinator.swift in Sources */,
+				183CFA0D260A137700D9D6B8 /* SurfaceTilemap.swift in Sources */,
+				183CFA1F260A153B00D9D6B8 /* SurfaceTile.swift in Sources */,
+				183CFA06260A132C00D9D6B8 /* Tilemap.swift in Sources */,
 				18FE5F092609E64700860963 /* ViewController.swift in Sources */,
+				183CFA22260A154200D9D6B8 /* SurfaceEdge.swift in Sources */,
 				18FE5F312609E8E200860963 /* PatternViewController.swift in Sources */,
+				183CFA0A260A136F00D9D6B8 /* FootpathTilemap.swift in Sources */,
 				18FE5F3D2609E9F000860963 /* NSResponder.swift in Sources */,
 				18FE5F292609E89300860963 /* WindowCoordinator.swift in Sources */,
 				18FE5F362609E90000860963 /* WindowController.swift in Sources */,
 				18FE5F072609E64700860963 /* AppDelegate.swift in Sources */,
 				18FE5F0B2609E64700860963 /* Document.swift in Sources */,
+				183CFA19260A14A300D9D6B8 /* SurfaceTileset.swift in Sources */,
+				183CFA10260A13D400D9D6B8 /* FootpathTileset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Furrow/Furrow.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furrow/Supporting/Furrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Furrow/Supporting/Info.plist;
@@ -410,7 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Furrow/Furrow.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furrow/Supporting/Furrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Furrow/Supporting/Info.plist;
@@ -446,6 +529,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		188223EF260A0C0700189B95 /* Meadow */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Meadow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18FE5EFB2609E64700860963 /* Project object */;
 }
