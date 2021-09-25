@@ -3,257 +3,263 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		183CFA06260A132C00D9D6B8 /* Tilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA05260A132C00D9D6B8 /* Tilemap.swift */; };
-		183CFA0A260A136F00D9D6B8 /* FootpathTilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */; };
-		183CFA0D260A137700D9D6B8 /* SurfaceTilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */; };
-		183CFA10260A13D400D9D6B8 /* FootpathTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */; };
-		183CFA15260A141300D9D6B8 /* FootpathTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA14260A141300D9D6B8 /* FootpathTile.swift */; };
-		183CFA19260A14A300D9D6B8 /* SurfaceTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */; };
-		183CFA1C260A14B300D9D6B8 /* SurfaceEdgeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */; };
-		183CFA1F260A153B00D9D6B8 /* SurfaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */; };
-		183CFA22260A154200D9D6B8 /* SurfaceEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */; };
-		183CFA25260A222F00D9D6B8 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CFA24260A222F00D9D6B8 /* NSImage.swift */; };
-		188223F0260A0C0700189B95 /* Meadow in Frameworks */ = {isa = PBXBuildFile; productRef = 188223EF260A0C0700189B95 /* Meadow */; };
-		188223F3260A0C4800189B95 /* FootpathTileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188223F2260A0C4800189B95 /* FootpathTileType.swift */; };
-		18FE5F072609E64700860963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F062609E64700860963 /* AppDelegate.swift */; };
-		18FE5F092609E64700860963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F082609E64700860963 /* ViewController.swift */; };
-		18FE5F0B2609E64700860963 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F0A2609E64700860963 /* Document.swift */; };
-		18FE5F0D2609E64700860963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18FE5F0C2609E64700860963 /* Assets.xcassets */; };
-		18FE5F102609E64700860963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18FE5F0E2609E64700860963 /* Main.storyboard */; };
-		18FE5F222609E86500860963 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F212609E86500860963 /* Coordinator.swift */; };
-		18FE5F292609E89300860963 /* WindowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F282609E89300860963 /* WindowCoordinator.swift */; };
-		18FE5F2D2609E8C500860963 /* PatternViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F2C2609E8C500860963 /* PatternViewCoordinator.swift */; };
-		18FE5F312609E8E200860963 /* PatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F302609E8E200860963 /* PatternViewController.swift */; };
-		18FE5F362609E90000860963 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F352609E90000860963 /* WindowController.swift */; };
-		18FE5F3A2609E9D100860963 /* NSStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F392609E9D100860963 /* NSStoryboard.swift */; };
-		18FE5F3D2609E9F000860963 /* NSResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FE5F3C2609E9F000860963 /* NSResponder.swift */; };
+		1801DE5926FDD67A0047D10D /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE5826FDD67A0047D10D /* Tab.swift */; };
+		1801DE5B26FE05080047D10D /* TilesetBlobViewTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE5A26FE05080047D10D /* TilesetBlobViewTile.swift */; };
+		1801DE5D26FE05D60047D10D /* SurfaceMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */; };
+		1801DE5F26FE1A530047D10D /* TilemapExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE5E26FE1A530047D10D /* TilemapExportOperation.swift */; };
+		1801DE6126FF4F8A0047D10D /* TilesetExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6026FF4F8A0047D10D /* TilesetExportOperation.swift */; };
+		1801DE6326FF53780047D10D /* GenericTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6226FF53780047D10D /* GenericTile.swift */; };
+		1801DE6526FF54040047D10D /* TilesetImageExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6426FF54040047D10D /* TilesetImageExportOperation.swift */; };
+		1801DE6926FF8B8E0047D10D /* TileExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6826FF8B8E0047D10D /* TileExportOperation.swift */; };
+		1801DE6B26FF957D0047D10D /* FileExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6A26FF957D0047D10D /* FileExportOperation.swift */; };
+		1801EA9D26FCE9A000E5CA86 /* Tileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801EA9C26FCE9A000E5CA86 /* Tileset.swift */; };
+		180B603B26FC7E34005304D1 /* PeakOperation in Frameworks */ = {isa = PBXBuildFile; productRef = 180B603A26FC7E34005304D1 /* PeakOperation */; };
+		180B603E26FC7E5F005304D1 /* TilesetImportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B603D26FC7E5F005304D1 /* TilesetImportOperation.swift */; };
+		180B604026FC89A4005304D1 /* TilesetTileImportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B603F26FC89A4005304D1 /* TilesetTileImportOperation.swift */; };
+		180B604226FC95DE005304D1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604126FC95DE005304D1 /* Error.swift */; };
+		180B604426FCABB3005304D1 /* TilesetScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604326FCABB3005304D1 /* TilesetScrollView.swift */; };
+		180B604826FCBAC9005304D1 /* TilesetTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604726FCBAC9005304D1 /* TilesetTile.swift */; };
+		180B604A26FCC0CF005304D1 /* TilesetScrollViewTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */; };
+		18540B5726FC750100D5E874 /* SidebarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5626FC750100D5E874 /* SidebarItemView.swift */; };
+		18540B5A26FC753500D5E874 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5926FC753500D5E874 /* BadgeView.swift */; };
+		18540B5C26FC756400D5E874 /* SidebarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5B26FC756400D5E874 /* SidebarItemModel.swift */; };
+		18540B5E26FC758700D5E874 /* BadgeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5D26FC758700D5E874 /* BadgeModel.swift */; };
+		18540B6126FC75B600D5E874 /* TilesetBlobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B6026FC75B600D5E874 /* TilesetBlobView.swift */; };
+		1858157426FB554D00BEA637 /* FurrowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858157326FB554D00BEA637 /* FurrowApp.swift */; };
+		1858157626FB554D00BEA637 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858157526FB554D00BEA637 /* Document.swift */; };
+		1858157826FB554D00BEA637 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858157726FB554D00BEA637 /* AppView.swift */; };
+		1858157A26FB554E00BEA637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1858157926FB554E00BEA637 /* Assets.xcassets */; };
+		1858158826FB559300BEA637 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858158726FB559300BEA637 /* SidebarView.swift */; };
+		1858158A26FB564400BEA637 /* TilesetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858158926FB564400BEA637 /* TilesetView.swift */; };
+		1858158C26FB5DDB00BEA637 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858158B26FB5DDB00BEA637 /* AppViewModel.swift */; };
+		18598F0726FB609D00A65A3B /* Meadow in Frameworks */ = {isa = PBXBuildFile; productRef = 18598F0626FB609D00A65A3B /* Meadow */; };
+		18598F0A26FB653F00A65A3B /* SurfaceOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */; };
+		18598F0C26FB6A4800A65A3B /* FootpathTileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */; };
+		18598F1026FC5A7300A65A3B /* Tilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0F26FC5A7300A65A3B /* Tilemap.swift */; };
+		18598F1326FC67FA00A65A3B /* SurfaceTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1226FC67FA00A65A3B /* SurfaceTileset.swift */; };
+		18598F1526FC685500A65A3B /* SurfaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1426FC685500A65A3B /* SurfaceTile.swift */; };
+		18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */; };
+		18598F1926FC6D6500A65A3B /* FootpathTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1826FC6D6500A65A3B /* FootpathTile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		183CFA05260A132C00D9D6B8 /* Tilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tilemap.swift; sourceTree = "<group>"; };
-		183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTilemap.swift; sourceTree = "<group>"; };
-		183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTilemap.swift; sourceTree = "<group>"; };
-		183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileset.swift; sourceTree = "<group>"; };
-		183CFA14260A141300D9D6B8 /* FootpathTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTile.swift; sourceTree = "<group>"; };
-		183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTileset.swift; sourceTree = "<group>"; };
-		183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceEdgeset.swift; sourceTree = "<group>"; };
-		183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTile.swift; sourceTree = "<group>"; };
-		183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceEdge.swift; sourceTree = "<group>"; };
-		183CFA24260A222F00D9D6B8 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
-		188223EC260A0BC800189B95 /* Meadow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Meadow; path = ../Meadow; sourceTree = "<group>"; };
-		188223F2260A0C4800189B95 /* FootpathTileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileType.swift; sourceTree = "<group>"; };
-		18FE5F032609E64700860963 /* Furrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		18FE5F062609E64700860963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		18FE5F082609E64700860963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		18FE5F0A2609E64700860963 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		18FE5F0C2609E64700860963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		18FE5F0F2609E64700860963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		18FE5F112609E64700860963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18FE5F122609E64700860963 /* Furrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Furrow.entitlements; sourceTree = "<group>"; };
-		18FE5F212609E86500860963 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		18FE5F282609E89300860963 /* WindowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowCoordinator.swift; sourceTree = "<group>"; };
-		18FE5F2C2609E8C500860963 /* PatternViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewCoordinator.swift; sourceTree = "<group>"; };
-		18FE5F302609E8E200860963 /* PatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewController.swift; sourceTree = "<group>"; };
-		18FE5F352609E90000860963 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		18FE5F392609E9D100860963 /* NSStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSStoryboard.swift; sourceTree = "<group>"; };
-		18FE5F3C2609E9F000860963 /* NSResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSResponder.swift; sourceTree = "<group>"; };
+		1801DE5826FDD67A0047D10D /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		1801DE5A26FE05080047D10D /* TilesetBlobViewTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetBlobViewTile.swift; sourceTree = "<group>"; };
+		1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceMaterial.swift; sourceTree = "<group>"; };
+		1801DE5E26FE1A530047D10D /* TilemapExportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilemapExportOperation.swift; sourceTree = "<group>"; };
+		1801DE6026FF4F8A0047D10D /* TilesetExportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetExportOperation.swift; sourceTree = "<group>"; };
+		1801DE6226FF53780047D10D /* GenericTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTile.swift; sourceTree = "<group>"; };
+		1801DE6426FF54040047D10D /* TilesetImageExportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetImageExportOperation.swift; sourceTree = "<group>"; };
+		1801DE6826FF8B8E0047D10D /* TileExportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileExportOperation.swift; sourceTree = "<group>"; };
+		1801DE6A26FF957D0047D10D /* FileExportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExportOperation.swift; sourceTree = "<group>"; };
+		1801EA9C26FCE9A000E5CA86 /* Tileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tileset.swift; sourceTree = "<group>"; };
+		180B603D26FC7E5F005304D1 /* TilesetImportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetImportOperation.swift; sourceTree = "<group>"; };
+		180B603F26FC89A4005304D1 /* TilesetTileImportOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetTileImportOperation.swift; sourceTree = "<group>"; };
+		180B604126FC95DE005304D1 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		180B604326FCABB3005304D1 /* TilesetScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetScrollView.swift; sourceTree = "<group>"; };
+		180B604726FCBAC9005304D1 /* TilesetTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetTile.swift; sourceTree = "<group>"; };
+		180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetScrollViewTile.swift; sourceTree = "<group>"; };
+		18540B5626FC750100D5E874 /* SidebarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarItemView.swift; sourceTree = "<group>"; };
+		18540B5926FC753500D5E874 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		18540B5B26FC756400D5E874 /* SidebarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarItemModel.swift; sourceTree = "<group>"; };
+		18540B5D26FC758700D5E874 /* BadgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
+		18540B6026FC75B600D5E874 /* TilesetBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TilesetBlobView.swift; path = Furrow/Views/Sidebar/TilesetBlobView.swift; sourceTree = SOURCE_ROOT; };
+		1858157026FB554D00BEA637 /* Furrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1858157326FB554D00BEA637 /* FurrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurrowApp.swift; sourceTree = "<group>"; };
+		1858157526FB554D00BEA637 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		1858157726FB554D00BEA637 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		1858157926FB554E00BEA637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1858157E26FB554E00BEA637 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1858157F26FB554E00BEA637 /* Furrow.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Furrow.entitlements; sourceTree = "<group>"; };
+		1858158726FB559300BEA637 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		1858158926FB564400BEA637 /* TilesetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetView.swift; sourceTree = "<group>"; };
+		1858158B26FB5DDB00BEA637 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		18598F0426FB608800A65A3B /* Meadow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Meadow; path = ../Meadow; sourceTree = "<group>"; };
+		18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceOverlay.swift; sourceTree = "<group>"; };
+		18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileType.swift; sourceTree = "<group>"; };
+		18598F0F26FC5A7300A65A3B /* Tilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tilemap.swift; sourceTree = "<group>"; };
+		18598F1226FC67FA00A65A3B /* SurfaceTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTileset.swift; sourceTree = "<group>"; };
+		18598F1426FC685500A65A3B /* SurfaceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTile.swift; sourceTree = "<group>"; };
+		18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileset.swift; sourceTree = "<group>"; };
+		18598F1826FC6D6500A65A3B /* FootpathTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		18FE5F002609E64700860963 /* Frameworks */ = {
+		1858156D26FB554C00BEA637 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188223F0260A0C0700189B95 /* Meadow in Frameworks */,
+				18598F0726FB609D00A65A3B /* Meadow in Frameworks */,
+				180B603B26FC7E34005304D1 /* PeakOperation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		183CFA04260A132400D9D6B8 /* Tilemap */ = {
+		1801DE6626FF8B810047D10D /* Import */ = {
 			isa = PBXGroup;
 			children = (
-				183CFA12260A13D700D9D6B8 /* Footpath */,
-				183CFA13260A13DC00D9D6B8 /* Surface */,
-				183CFA05260A132C00D9D6B8 /* Tilemap.swift */,
+				180B603D26FC7E5F005304D1 /* TilesetImportOperation.swift */,
+				180B603F26FC89A4005304D1 /* TilesetTileImportOperation.swift */,
 			);
-			path = Tilemap;
+			path = Import;
 			sourceTree = "<group>";
 		};
-		183CFA12260A13D700D9D6B8 /* Footpath */ = {
+		1801DE6726FF8B870047D10D /* Export */ = {
 			isa = PBXGroup;
 			children = (
-				183CFA09260A136F00D9D6B8 /* FootpathTilemap.swift */,
-				183CFA0F260A13D400D9D6B8 /* FootpathTileset.swift */,
-				183CFA14260A141300D9D6B8 /* FootpathTile.swift */,
+				1801DE6826FF8B8E0047D10D /* TileExportOperation.swift */,
+				1801DE5E26FE1A530047D10D /* TilemapExportOperation.swift */,
+				1801DE6026FF4F8A0047D10D /* TilesetExportOperation.swift */,
+				1801DE6426FF54040047D10D /* TilesetImageExportOperation.swift */,
+				1801DE6A26FF957D0047D10D /* FileExportOperation.swift */,
 			);
-			path = Footpath;
+			path = Export;
 			sourceTree = "<group>";
 		};
-		183CFA13260A13DC00D9D6B8 /* Surface */ = {
+		180B603C26FC7E4D005304D1 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				183CFA0C260A137700D9D6B8 /* SurfaceTilemap.swift */,
-				183CFA18260A14A300D9D6B8 /* SurfaceTileset.swift */,
-				183CFA1B260A14B300D9D6B8 /* SurfaceEdgeset.swift */,
-				183CFA1E260A153B00D9D6B8 /* SurfaceTile.swift */,
-				183CFA21260A154200D9D6B8 /* SurfaceEdge.swift */,
+				1801DE6726FF8B870047D10D /* Export */,
+				1801DE6626FF8B810047D10D /* Import */,
 			);
-			path = Surface;
+			path = Operations;
 			sourceTree = "<group>";
 		};
-		188223EE260A0C0700189B95 /* Frameworks */ = {
+		18540B5526FC74F300D5E874 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				18540B5626FC750100D5E874 /* SidebarItemView.swift */,
+				1858158726FB559300BEA637 /* SidebarView.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		18540B5826FC752C00D5E874 /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				18540B5926FC753500D5E874 /* BadgeView.swift */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
+		18540B5F26FC75A600D5E874 /* Tileset */ = {
+			isa = PBXGroup;
+			children = (
+				18540B6026FC75B600D5E874 /* TilesetBlobView.swift */,
+				180B604326FCABB3005304D1 /* TilesetScrollView.swift */,
+				180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */,
+				1858158926FB564400BEA637 /* TilesetView.swift */,
+				1801DE5A26FE05080047D10D /* TilesetBlobViewTile.swift */,
+			);
+			path = Tileset;
+			sourceTree = "<group>";
+		};
+		1858156726FB554C00BEA637 = {
+			isa = PBXGroup;
+			children = (
+				18598F0426FB608800A65A3B /* Meadow */,
+				1858157226FB554D00BEA637 /* Furrow */,
+				1858157126FB554D00BEA637 /* Products */,
+				18598F0526FB609D00A65A3B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1858157126FB554D00BEA637 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1858157026FB554D00BEA637 /* Furrow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1858157226FB554D00BEA637 /* Furrow */ = {
+			isa = PBXGroup;
+			children = (
+				1858157926FB554E00BEA637 /* Assets.xcassets */,
+				1858157526FB554D00BEA637 /* Document.swift */,
+				18598F0826FB653300A65A3B /* Extensions */,
+				1858157F26FB554E00BEA637 /* Furrow.entitlements */,
+				1858157326FB554D00BEA637 /* FurrowApp.swift */,
+				1858157E26FB554E00BEA637 /* Info.plist */,
+				180B603C26FC7E4D005304D1 /* Operations */,
+				1801DE5826FDD67A0047D10D /* Tab.swift */,
+				18598F1126FC5B1300A65A3B /* Tilemap */,
+				1858158526FB555C00BEA637 /* View Models */,
+				1858158626FB556400BEA637 /* Views */,
+			);
+			path = Furrow;
+			sourceTree = "<group>";
+		};
+		1858158526FB555C00BEA637 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				1858158B26FB5DDB00BEA637 /* AppViewModel.swift */,
+				18540B5D26FC758700D5E874 /* BadgeModel.swift */,
+				18540B5B26FC756400D5E874 /* SidebarItemModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		1858158626FB556400BEA637 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1858157726FB554D00BEA637 /* AppView.swift */,
+				18540B5826FC752C00D5E874 /* Badge */,
+				18540B5526FC74F300D5E874 /* Sidebar */,
+				18540B5F26FC75A600D5E874 /* Tileset */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18598F0526FB609D00A65A3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		18FE5EFA2609E64700860963 = {
+		18598F0826FB653300A65A3B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				188223EC260A0BC800189B95 /* Meadow */,
-				18FE5F052609E64700860963 /* Furrow */,
-				18FE5F042609E64700860963 /* Products */,
-				188223EE260A0C0700189B95 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		18FE5F042609E64700860963 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F032609E64700860963 /* Furrow.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		18FE5F052609E64700860963 /* Furrow */ = {
-			isa = PBXGroup;
-			children = (
-				183CFA04260A132400D9D6B8 /* Tilemap */,
-				18FE5F382609E9C200860963 /* Extensions */,
-				18FE5F1E2609E7F100860963 /* Document */,
-				18FE5F1C2609E7C200860963 /* Coordinators */,
-				18FE5F1B2609E7BC00860963 /* Controllers */,
-				18FE5F1A2609E7B500860963 /* Storyboards */,
-				18FE5F192609E7AB00860963 /* Supporting */,
-				18FE5F062609E64700860963 /* AppDelegate.swift */,
-				18FE5F082609E64700860963 /* ViewController.swift */,
-				18FE5F0C2609E64700860963 /* Assets.xcassets */,
-			);
-			path = Furrow;
-			sourceTree = "<group>";
-		};
-		18FE5F192609E7AB00860963 /* Supporting */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F112609E64700860963 /* Info.plist */,
-				18FE5F122609E64700860963 /* Furrow.entitlements */,
-			);
-			path = Supporting;
-			sourceTree = "<group>";
-		};
-		18FE5F1A2609E7B500860963 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F0E2609E64700860963 /* Main.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		18FE5F1B2609E7BC00860963 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F332609E8E500860963 /* Pattern */,
-				18FE5F342609E8F800860963 /* Window */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		18FE5F1C2609E7C200860963 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F202609E85D00860963 /* Coordinator */,
-				18FE5F2B2609E8BC00860963 /* Pattern */,
-				18FE5F272609E88B00860963 /* Window */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		18FE5F1E2609E7F100860963 /* Document */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F0A2609E64700860963 /* Document.swift */,
-			);
-			path = Document;
-			sourceTree = "<group>";
-		};
-		18FE5F202609E85D00860963 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F212609E86500860963 /* Coordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		18FE5F272609E88B00860963 /* Window */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F282609E89300860963 /* WindowCoordinator.swift */,
-			);
-			path = Window;
-			sourceTree = "<group>";
-		};
-		18FE5F2B2609E8BC00860963 /* Pattern */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F2C2609E8C500860963 /* PatternViewCoordinator.swift */,
-			);
-			path = Pattern;
-			sourceTree = "<group>";
-		};
-		18FE5F332609E8E500860963 /* Pattern */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F302609E8E200860963 /* PatternViewController.swift */,
-			);
-			path = Pattern;
-			sourceTree = "<group>";
-		};
-		18FE5F342609E8F800860963 /* Window */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F352609E90000860963 /* WindowController.swift */,
-			);
-			path = Window;
-			sourceTree = "<group>";
-		};
-		18FE5F382609E9C200860963 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				18FE5F392609E9D100860963 /* NSStoryboard.swift */,
-				18FE5F3C2609E9F000860963 /* NSResponder.swift */,
-				188223F2260A0C4800189B95 /* FootpathTileType.swift */,
-				183CFA24260A222F00D9D6B8 /* NSImage.swift */,
+				180B604126FC95DE005304D1 /* Error.swift */,
+				18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */,
+				18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */,
+				1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		18598F1126FC5B1300A65A3B /* Tilemap */ = {
+			isa = PBXGroup;
+			children = (
+				18598F1826FC6D6500A65A3B /* FootpathTile.swift */,
+				18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */,
+				18598F1426FC685500A65A3B /* SurfaceTile.swift */,
+				18598F1226FC67FA00A65A3B /* SurfaceTileset.swift */,
+				18598F0F26FC5A7300A65A3B /* Tilemap.swift */,
+				1801EA9C26FCE9A000E5CA86 /* Tileset.swift */,
+				180B604726FCBAC9005304D1 /* TilesetTile.swift */,
+				1801DE6226FF53780047D10D /* GenericTile.swift */,
+			);
+			path = Tilemap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		18FE5F022609E64700860963 /* Furrow */ = {
+		1858156F26FB554C00BEA637 /* Furrow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18FE5F152609E64700860963 /* Build configuration list for PBXNativeTarget "Furrow" */;
+			buildConfigurationList = 1858158226FB554E00BEA637 /* Build configuration list for PBXNativeTarget "Furrow" */;
 			buildPhases = (
-				18FE5EFF2609E64700860963 /* Sources */,
-				18FE5F002609E64700860963 /* Frameworks */,
-				18FE5F012609E64700860963 /* Resources */,
+				1858156C26FB554C00BEA637 /* Sources */,
+				1858156D26FB554C00BEA637 /* Frameworks */,
+				1858156E26FB554C00BEA637 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -261,106 +267,112 @@
 			);
 			name = Furrow;
 			packageProductDependencies = (
-				188223EF260A0C0700189B95 /* Meadow */,
+				18598F0626FB609D00A65A3B /* Meadow */,
+				180B603A26FC7E34005304D1 /* PeakOperation */,
 			);
 			productName = Furrow;
-			productReference = 18FE5F032609E64700860963 /* Furrow.app */;
+			productReference = 1858157026FB554D00BEA637 /* Furrow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		18FE5EFB2609E64700860963 /* Project object */ = {
+		1858156826FB554C00BEA637 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					18FE5F022609E64700860963 = {
-						CreatedOnToolsVersion = 12.4;
+					1858156F26FB554C00BEA637 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 18FE5EFE2609E64700860963 /* Build configuration list for PBXProject "Furrow" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 1858156B26FB554C00BEA637 /* Build configuration list for PBXProject "Furrow" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 18FE5EFA2609E64700860963;
-			productRefGroup = 18FE5F042609E64700860963 /* Products */;
+			mainGroup = 1858156726FB554C00BEA637;
+			packageReferences = (
+				180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */,
+			);
+			productRefGroup = 1858157126FB554D00BEA637 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18FE5F022609E64700860963 /* Furrow */,
+				1858156F26FB554C00BEA637 /* Furrow */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		18FE5F012609E64700860963 /* Resources */ = {
+		1858156E26FB554C00BEA637 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FE5F0D2609E64700860963 /* Assets.xcassets in Resources */,
-				18FE5F102609E64700860963 /* Main.storyboard in Resources */,
+				1858157A26FB554E00BEA637 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		18FE5EFF2609E64700860963 /* Sources */ = {
+		1858156C26FB554C00BEA637 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183CFA15260A141300D9D6B8 /* FootpathTile.swift in Sources */,
-				183CFA1C260A14B300D9D6B8 /* SurfaceEdgeset.swift in Sources */,
-				18FE5F2D2609E8C500860963 /* PatternViewCoordinator.swift in Sources */,
-				18FE5F3A2609E9D100860963 /* NSStoryboard.swift in Sources */,
-				183CFA25260A222F00D9D6B8 /* NSImage.swift in Sources */,
-				188223F3260A0C4800189B95 /* FootpathTileType.swift in Sources */,
-				18FE5F222609E86500860963 /* Coordinator.swift in Sources */,
-				183CFA0D260A137700D9D6B8 /* SurfaceTilemap.swift in Sources */,
-				183CFA1F260A153B00D9D6B8 /* SurfaceTile.swift in Sources */,
-				183CFA06260A132C00D9D6B8 /* Tilemap.swift in Sources */,
-				18FE5F092609E64700860963 /* ViewController.swift in Sources */,
-				183CFA22260A154200D9D6B8 /* SurfaceEdge.swift in Sources */,
-				18FE5F312609E8E200860963 /* PatternViewController.swift in Sources */,
-				183CFA0A260A136F00D9D6B8 /* FootpathTilemap.swift in Sources */,
-				18FE5F3D2609E9F000860963 /* NSResponder.swift in Sources */,
-				18FE5F292609E89300860963 /* WindowCoordinator.swift in Sources */,
-				18FE5F362609E90000860963 /* WindowController.swift in Sources */,
-				18FE5F072609E64700860963 /* AppDelegate.swift in Sources */,
-				18FE5F0B2609E64700860963 /* Document.swift in Sources */,
-				183CFA19260A14A300D9D6B8 /* SurfaceTileset.swift in Sources */,
-				183CFA10260A13D400D9D6B8 /* FootpathTileset.swift in Sources */,
+				18540B6126FC75B600D5E874 /* TilesetBlobView.swift in Sources */,
+				1801DE6926FF8B8E0047D10D /* TileExportOperation.swift in Sources */,
+				1801DE6326FF53780047D10D /* GenericTile.swift in Sources */,
+				1858157426FB554D00BEA637 /* FurrowApp.swift in Sources */,
+				180B604A26FCC0CF005304D1 /* TilesetScrollViewTile.swift in Sources */,
+				1801DE6526FF54040047D10D /* TilesetImageExportOperation.swift in Sources */,
+				1801EA9D26FCE9A000E5CA86 /* Tileset.swift in Sources */,
+				1858158826FB559300BEA637 /* SidebarView.swift in Sources */,
+				18540B5726FC750100D5E874 /* SidebarItemView.swift in Sources */,
+				1801DE6126FF4F8A0047D10D /* TilesetExportOperation.swift in Sources */,
+				1858158C26FB5DDB00BEA637 /* AppViewModel.swift in Sources */,
+				1801DE5F26FE1A530047D10D /* TilemapExportOperation.swift in Sources */,
+				1801DE5926FDD67A0047D10D /* Tab.swift in Sources */,
+				18598F0A26FB653F00A65A3B /* SurfaceOverlay.swift in Sources */,
+				18598F1326FC67FA00A65A3B /* SurfaceTileset.swift in Sources */,
+				180B603E26FC7E5F005304D1 /* TilesetImportOperation.swift in Sources */,
+				18540B5A26FC753500D5E874 /* BadgeView.swift in Sources */,
+				18540B5C26FC756400D5E874 /* SidebarItemModel.swift in Sources */,
+				180B604026FC89A4005304D1 /* TilesetTileImportOperation.swift in Sources */,
+				1801DE6B26FF957D0047D10D /* FileExportOperation.swift in Sources */,
+				18540B5E26FC758700D5E874 /* BadgeModel.swift in Sources */,
+				18598F1026FC5A7300A65A3B /* Tilemap.swift in Sources */,
+				1801DE5D26FE05D60047D10D /* SurfaceMaterial.swift in Sources */,
+				1801DE5B26FE05080047D10D /* TilesetBlobViewTile.swift in Sources */,
+				18598F1526FC685500A65A3B /* SurfaceTile.swift in Sources */,
+				1858158A26FB564400BEA637 /* TilesetView.swift in Sources */,
+				1858157626FB554D00BEA637 /* Document.swift in Sources */,
+				180B604426FCABB3005304D1 /* TilesetScrollView.swift in Sources */,
+				18598F0C26FB6A4800A65A3B /* FootpathTileType.swift in Sources */,
+				1858157826FB554D00BEA637 /* AppView.swift in Sources */,
+				18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */,
+				180B604226FC95DE005304D1 /* Error.swift in Sources */,
+				180B604826FCBAC9005304D1 /* TilesetTile.swift in Sources */,
+				18598F1926FC6D6500A65A3B /* FootpathTile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		18FE5F0E2609E64700860963 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				18FE5F0F2609E64700860963 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		18FE5F132609E64700860963 /* Debug */ = {
+		1858158026FB554E00BEA637 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -405,7 +417,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,13 +427,13 @@
 			};
 			name = Debug;
 		};
-		18FE5F142609E64700860963 /* Release */ = {
+		1858158126FB554E00BEA637 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -460,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -469,40 +481,54 @@
 			};
 			name = Release;
 		};
-		18FE5F162609E64700860963 /* Debug */ = {
+		1858158326FB554E00BEA637 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Furrow/Supporting/Furrow.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furrow/Furrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Furrow/Supporting/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Furrow/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.so.Furrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		18FE5F172609E64700860963 /* Release */ = {
+		1858158426FB554E00BEA637 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Furrow/Supporting/Furrow.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Furrow/Furrow.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Furrow/Supporting/Info.plist;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Furrow/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.so.Furrow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -510,32 +536,48 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18FE5EFE2609E64700860963 /* Build configuration list for PBXProject "Furrow" */ = {
+		1858156B26FB554C00BEA637 /* Build configuration list for PBXProject "Furrow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18FE5F132609E64700860963 /* Debug */,
-				18FE5F142609E64700860963 /* Release */,
+				1858158026FB554E00BEA637 /* Debug */,
+				1858158126FB554E00BEA637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18FE5F152609E64700860963 /* Build configuration list for PBXNativeTarget "Furrow" */ = {
+		1858158226FB554E00BEA637 /* Build configuration list for PBXNativeTarget "Furrow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18FE5F162609E64700860963 /* Debug */,
-				18FE5F172609E64700860963 /* Release */,
+				1858158326FB554E00BEA637 /* Debug */,
+				1858158426FB554E00BEA637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:3Squared/PeakOperation.git";
+			requirement = {
+				branch = feature/macos_compatability;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		188223EF260A0C0700189B95 /* Meadow */ = {
+		180B603A26FC7E34005304D1 /* PeakOperation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */;
+			productName = PeakOperation;
+		};
+		18598F0626FB609D00A65A3B /* Meadow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Meadow;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 18FE5EFB2609E64700860963 /* Project object */;
+	rootObject = 1858156826FB554C00BEA637 /* Project object */;
 }
