@@ -21,9 +21,9 @@ struct SidebarView: View {
             
             ForEach(FootpathTileType.allCases, id: \.self) { tileType in
                 
-                NavigationLink(destination: destinationView, tag: Tileset.footpath(tileType), selection: $model.tileset) {
+                NavigationLink(destination: destinationView, tag: .footpath(tileType), selection: $model.tileset) {
                     
-                    SidebarItemView(model: .init(title: tileType.id.capitalized, imageName: tileType.imageName, count: model.tilemap.footpath.tiles(with: tileType).count))
+                    SidebarItemView(model: .init(title: tileType.id.capitalized, imageName: tileType.imageName, count: model.count(tileset: .footpath(tileType))))
                 }
             }
             
@@ -33,9 +33,9 @@ struct SidebarView: View {
             
             ForEach(SurfaceOverlay.allCases, id: \.self) { overlay in
                 
-                NavigationLink(destination: destinationView, tag: Tileset.surface(overlay), selection: $model.tileset) {
+                NavigationLink(destination: destinationView, tag: .surface(overlay), selection: $model.tileset) {
                     
-                    SidebarItemView(model: .init(title: overlay.id.capitalized, imageName: overlay.imageName, count: model.tilemap.surface.tiles(with: overlay).count))
+                    SidebarItemView(model: .init(title: overlay.id.capitalized, imageName: overlay.imageName, count: model.count(tileset: .surface(overlay))))
                 }
             }
         }
@@ -82,7 +82,10 @@ struct SidebarView: View {
                 
                 Divider()
                 
-                Toggle("Show Tile Identifiers", isOn: $model.showIdentifiers)
+                if model.selectedTab == .tilemap {
+                    
+                    Toggle("Show Tile Identifiers", isOn: $model.showIdentifiers)
+                }
             }
             label: {
                 Label("Change view settings", systemImage: "slider.horizontal.3")

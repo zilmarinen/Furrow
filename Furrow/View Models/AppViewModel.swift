@@ -80,6 +80,15 @@ extension AppViewModel {
             result[element.identifier] = element
         }
     }
+    
+    func count(tileset: Tileset) -> Int {
+        
+        switch tileset {
+            
+        case .footpath(let tileType): return tilemap.footpath.tiles(with: tileType).count
+        case .surface(let overlay): return tilemap.surface.tiles(with: overlay).count
+        }
+    }
 }
 
 extension AppViewModel {
