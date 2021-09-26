@@ -155,19 +155,24 @@ extension AppViewModel {
             
             guard let url = panel.url else { return }
             
-            let operation = TilemapExportOperation(url: url, tilemap: tilemap)
+            viewState = .exporting
             
-            operation.enqueue(on: operationQueue) { result in
+            let exportOperation = TilemapExportOperation(url: url, tilemap: tilemap)
+            let writeOperation = WriteOperation(url: url);
+            
+            exportOperation.passesResult(to: writeOperation).enqueue(on: operationQueue) { result in
                 
                 switch result {
                     
                 case .failure: break
-                case .success(let tiles):
+                case .success: break
+                }
+            
+                DispatchQueue.main.async { [weak self] in
                     
-                    DispatchQueue.main.async { [weak self] in
-                        
-                        //
-                    }
+                    guard let self = self else { return }
+                
+                    self.viewState = .idle
                 }
             }
             

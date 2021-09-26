@@ -10,7 +10,7 @@ import PeakOperation
 
 class TilemapExportOperation: ConcurrentOperation, ProducesResult {
     
-    public var output: Result<Void, Error> = Result { throw ResultError.noResult }
+    public var output: Result<[String : FileWrapper], Error> = Result { throw ResultError.noResult }
     
     let url: URL
     let tilemap: Tilemap
@@ -30,34 +30,51 @@ class TilemapExportOperation: ConcurrentOperation, ProducesResult {
         
         let group = DispatchGroup()
         var errors: [Error] = []
+        var wrappers: [String : FileWrapper] = [:]
         
         group.enter()
-        print("Enqueing Footpath export operation")
+        
         footpathExport.enqueue(on: internalQueue) { result in
             
-            if case let .failure(error) = result {
+            switch result {
+                
+            case .failure(let error):
                 
                 errors.append(error)
+                
+            case .success(let output):
+                
+                let (tileset, files) = output
+                
+                wrappers[tileset] = files
             }
-            print("Footpath export operation complete")
+
             group.leave()
         }
         
         group.enter()
-        print("Enqueing Surface export operation")
+        
         surfaceExport.enqueue(on: internalQueue) { result in
             
-            if case let .failure(error) = result {
+            switch result {
+                
+            case .failure(let error):
                 
                 errors.append(error)
+                
+            case .success(let output):
+                
+                let (tileset, files) = output
+                
+                wrappers[tileset] = files
             }
-            print("Surface export operation complete")
+            
             group.leave()
         }
         
         group.wait()
         
-        output = errors.isEmpty ? .success(()) : .failure(ImportError.missingFile)
+        output = errors.isEmpty ? .success(wrappers) : .failure(ImportError.missingFile)
         
         finish()
     }

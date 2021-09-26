@@ -1,5 +1,5 @@
 //
-//  FileExportOperation.swift
+//  TileEncodingOperation.swift
 //
 //  Created by Zack Brown on 25/09/2021.
 //
@@ -8,18 +8,16 @@ import Foundation
 import Meadow
 import PeakOperation
 
-class FileExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
+class TileEncodingOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
     
     public var input: Result<([T], Data), Error> = Result { throw ResultError.noResult }
-    public var output: Result<Void, Error> = Result { throw ResultError.noResult }
+    public var output: Result<[String : FileWrapper], Error> = Result { throw ResultError.noResult }
     
-    let url: URL
     let season: Season
     let tileset: String
     
-    init(url: URL, season: Season, tileset: String) {
+    init(season: Season, tileset: String) {
         
-        self.url = url
         self.season = season
         self.tileset = tileset
         
@@ -44,9 +42,7 @@ class FileExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesR
             wrappers[tilemapFilename] = FileWrapper(regularFileWithContents: imageData)
             wrappers[tilesetFilename] = FileWrapper(regularFileWithContents: tileData)
             
-            let wrapper = FileWrapper(directoryWithFileWrappers: wrappers)
-            
-            try? wrapper.write(to: url, options: .atomic, originalContentsURL: nil)
+            output = .success(wrappers)
         }
         catch {
             
@@ -56,4 +52,3 @@ class FileExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesR
         finish()
     }
 }
-

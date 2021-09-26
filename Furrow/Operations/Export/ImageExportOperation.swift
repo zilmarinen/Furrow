@@ -1,5 +1,5 @@
 //
-//  TilesetImageExportOperation.swift
+//  ImageExportOperation.swift
 //
 //  Created by Zack Brown on 25/09/2021.
 //
@@ -9,7 +9,7 @@ import Euclid
 import Meadow
 import PeakOperation
 
-class TilesetImageExportOperation: ConcurrentOperation, ProducesResult {
+class ImageExportOperation: ConcurrentOperation, ProducesResult {
     
     enum Constants {
         
@@ -21,19 +21,19 @@ class TilesetImageExportOperation: ConcurrentOperation, ProducesResult {
         static let uvStep = (1.0 / Double(tilesPerRow))
     }
 
-    public var output: Result<([UVs], Data), Error> = Result { throw ResultError.noResult }
+    public var output: Result<([GenericTile], [UVs], Data), Error> = Result { throw ResultError.noResult }
 
-    let images: [NSImage]
+    let tiles: [GenericTile]
 
-    init(images: [NSImage]) {
+    init(tiles: [GenericTile]) {
 
-        self.images = images
+        self.tiles = tiles
 
         super.init()
     }
 
     override func execute() {
-        print("Exporting Tileset with \(images.count) images")
+        
         let canvasSize = NSSize(width: Constants.canvasSize / 2.0, height: Constants.canvasSize / 2.0)
         
         let canvas = NSImage(size: canvasSize)
@@ -42,14 +42,12 @@ class TilesetImageExportOperation: ConcurrentOperation, ProducesResult {
         
         canvas.lockFocus()
         
-        for index in images.indices {
+        for index in tiles.indices {
             
-            let image = images[index]
+            let image = tiles[index].image
             
             let y = Int(floor(Double(index / Constants.tilesPerRow)))
             let x = index - (y * Constants.tilesPerRow)
-            
-            print("[\(x), \(y)] -> \(index)")
             
             let rect = NSRect(x: (Double(x) * Constants.tileSize), y: (Double(y) * Constants.tileSize), width: Constants.tileSize, height: Constants.tileSize)
             
@@ -83,8 +81,8 @@ class TilesetImageExportOperation: ConcurrentOperation, ProducesResult {
             
             return finish()
         }
-        print("Finished writing tileset")
-        output = .success((uvs, data))
+        
+        output = .success((tiles, uvs, data))
 
         finish()
     }

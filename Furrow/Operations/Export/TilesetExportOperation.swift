@@ -11,7 +11,7 @@ import PeakOperation
 
 class TilesetExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ProducesResult {
     
-    public var output: Result<Void, Error> = Result { throw ResultError.noResult }
+    public var output: Result<(String, FileWrapper), Error> = Result { throw ResultError.noResult }
     
     private let dispatchQueue = DispatchQueue(label: "TilesetExportOperation", attributes: .concurrent)
     
@@ -41,32 +41,35 @@ class TilesetExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, Produc
         
         let group = DispatchGroup()
         var errors: [Error] = []
+        var wrappers: [String : FileWrapper] = [:]
         
         for season in Season.allCases {
             
             let seasonalTiles = tiles.filter { $0.season == season }
             
-            let images = seasonalTiles.map { $0.image }
-            
-            guard !images.isEmpty else { continue }
+            guard !seasonalTiles.isEmpty else { continue }
             
             group.enter()
             
-            let imageOperation = TilesetImageExportOperation(images: images)
-            let tileOperation = TileExportOperation<T>(tiles: seasonalTiles)
-            let fileOperation = FileExportOperation<T>(url: url, season: season, tileset: tileset)
+            let imageOperation = ImageExportOperation(tiles: seasonalTiles)
+            let tileOperation = TileExportOperation<T>()
+            let encodingOperation = TileEncodingOperation<T>(season: season, tileset: tileset)
             
-            print("Enqueing \(season.id.capitalized) image export operation")
-            
-            imageOperation.passesResult(to: tileOperation).passesResult(to: fileOperation).enqueue(on: internalQueue) { result in
+            imageOperation.passesResult(to: tileOperation).passesResult(to: encodingOperation).enqueue(on: internalQueue) { result in
                 
                 self.dispatchQueue.async(flags: .barrier) {
-                
-                    if case let .failure(error) = result {
+                    
+                    switch result {
+                        
+                    case .failure(let error):
                         
                         errors.append(error)
+                        
+                    case .success(let files):
+                        
+                        files.forEach { wrappers[$0] = $1 }
                     }
-                    print("\(season.id.capitalized) image export operation complete")
+                    
                     group.leave()
                 }
             }
@@ -74,7 +77,7 @@ class TilesetExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, Produc
         
         group.wait()
         
-        output = .success(())
+        output = errors.isEmpty ? .success((tileset, FileWrapper(directoryWithFileWrappers: wrappers))) : .failure(ImportError.missingFile)
         
         finish()
     }
