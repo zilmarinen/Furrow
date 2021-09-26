@@ -41,7 +41,9 @@ struct AppView: View {
                         }
                     }
                     label: {
+                        
                         Label("Add tileset images", systemImage: "plus")
+                            .help("Add tileset images")
                     }
                 }
             

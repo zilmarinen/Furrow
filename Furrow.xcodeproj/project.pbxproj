@@ -45,6 +45,8 @@
 		18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */; };
 		18598F1926FC6D6500A65A3B /* FootpathTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1826FC6D6500A65A3B /* FootpathTile.swift */; };
 		187FE82E270090480026A4EB /* WriteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE82D270090480026A4EB /* WriteOperation.swift */; };
+		187FE8302700AEE90026A4EB /* AddTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE82F2700AEE90026A4EB /* AddTilesView.swift */; };
+		187FE8322700B7080026A4EB /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE8312700B7080026A4EB /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileset.swift; sourceTree = "<group>"; };
 		18598F1826FC6D6500A65A3B /* FootpathTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTile.swift; sourceTree = "<group>"; };
 		187FE82D270090480026A4EB /* WriteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOperation.swift; sourceTree = "<group>"; };
+		187FE82F2700AEE90026A4EB /* AddTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTilesView.swift; sourceTree = "<group>"; };
+		187FE8312700B7080026A4EB /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 				180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */,
 				1858158926FB564400BEA637 /* TilesetView.swift */,
 				1801DE5A26FE05080047D10D /* TilesetBlobViewTile.swift */,
+				187FE82F2700AEE90026A4EB /* AddTilesView.swift */,
 			);
 			path = Tileset;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */,
 				18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */,
 				1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */,
+				187FE8312700B7080026A4EB /* ButtonStyle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				180B604026FC89A4005304D1 /* TilesetTileImportOperation.swift in Sources */,
 				1801DE6B26FF957D0047D10D /* TileEncodingOperation.swift in Sources */,
 				18540B5E26FC758700D5E874 /* BadgeModel.swift in Sources */,
+				187FE8302700AEE90026A4EB /* AddTilesView.swift in Sources */,
 				18598F1026FC5A7300A65A3B /* Tilemap.swift in Sources */,
 				1801DE5D26FE05D60047D10D /* SurfaceMaterial.swift in Sources */,
 				1801DE5B26FE05080047D10D /* TilesetBlobViewTile.swift in Sources */,
@@ -359,6 +366,7 @@
 				1858157626FB554D00BEA637 /* Document.swift in Sources */,
 				180B604426FCABB3005304D1 /* TilesetScrollView.swift in Sources */,
 				18598F0C26FB6A4800A65A3B /* FootpathTileType.swift in Sources */,
+				187FE8322700B7080026A4EB /* ButtonStyle.swift in Sources */,
 				1858157826FB554D00BEA637 /* AppView.swift in Sources */,
 				18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */,
 				180B604226FC95DE005304D1 /* Error.swift in Sources */,

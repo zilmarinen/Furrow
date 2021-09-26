@@ -15,8 +15,8 @@ struct BadgeView: View {
         Text(model.title)
             .font(.system(size: 10, weight: .regular))
             .foregroundColor(model.textColor)
-            .padding(EdgeInsets(top: 2, leading: 6, bottom: 2, trailing: 6))
+            .padding(FurrowApp.Constants.edgeInsets)
             .background(model.color)
-            .cornerRadius(8)
+            .cornerRadius(FurrowApp.Constants.padding)
     }
 }

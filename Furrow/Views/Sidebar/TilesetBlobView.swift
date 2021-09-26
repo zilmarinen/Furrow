@@ -15,38 +15,45 @@ struct TilesetBlobView: View {
 
     var body: some View {
         
-        ZStack {
+        if model.seasonalTiles.isEmpty {
             
-            if let image = model.material.image {
-                
-                Image(nsImage: image)
-                    .renderingMode(.original)
-                    .resizable()
-            }
-         
-            VStack(alignment: .leading, spacing: 0) {
+            AddTilesView(model: model)
+        }
+        else {
             
-                ForEach(0..<Tilemap.blob.count, id: \.self) { row in
+            ZStack {
                 
-                    HStack(alignment: .center, spacing: 0) {
-                        
-                        ForEach(0..<Tilemap.blob[row].count, id: \.self) { column in
+                if let image = model.material.image {
+                    
+                    Image(nsImage: image)
+                        .renderingMode(.original)
+                        .resizable()
+                }
+             
+                VStack(alignment: .leading, spacing: 0) {
+                
+                    ForEach(0..<Tilemap.blob.count, id: \.self) { row in
+                    
+                        HStack(alignment: .center, spacing: 0) {
                             
-                            let identifier = Tilemap.blob[row][column]
-                            
-                            if let image = model.blobTiles[identifier]?.image {
-                             
-                                TilesetBlobViewTile(identifier: identifier, image: image, showIdentifier: $model.showIdentifiers)
-                            }
-                            else {
+                            ForEach(0..<Tilemap.blob[row].count, id: \.self) { column in
                                 
-                                Color.clear
+                                let identifier = Tilemap.blob[row][column]
+                                
+                                if let image = model.blobTiles[identifier]?.image {
+                                 
+                                    TilesetBlobViewTile(identifier: identifier, image: image, showIdentifier: $model.showIdentifiers)
+                                }
+                                else {
+                                    
+                                    Color.clear
+                                }
                             }
                         }
                     }
                 }
             }
+            .aspectRatio(1, contentMode: .fit)
         }
-        .aspectRatio(1, contentMode: .fit)
     }
 }

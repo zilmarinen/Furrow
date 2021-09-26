@@ -9,17 +9,6 @@ import SwiftUI
 
 struct TilesetScrollViewTile: View {
     
-    enum Constants {
-        
-        static let buttonSize = Constants.padding * 2.0
-        static let imageSize = 128.0
-        
-        static let padding = 8.0
-        static let cornerRadius = 8.0
-        
-        static let edgeInsets = EdgeInsets(top: 2, leading: padding, bottom: 2, trailing: padding)
-    }
-    
     let tile: TilesetTile
     let material: SurfaceMaterial
     
@@ -34,7 +23,7 @@ struct TilesetScrollViewTile: View {
                     Image(nsImage: image)
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width: Constants.imageSize, height: Constants.imageSize)
+                        .frame(width: FurrowApp.Constants.minimumImageSize, height: FurrowApp.Constants.minimumImageSize)
                 }
             
                 if let image = tile.image {
@@ -42,19 +31,19 @@ struct TilesetScrollViewTile: View {
                     Image(nsImage: image)
                         .renderingMode(.original)
                         .resizable()
-                        .frame(width: Constants.imageSize, height: Constants.imageSize)
+                        .frame(width: FurrowApp.Constants.minimumImageSize, height: FurrowApp.Constants.minimumImageSize)
                 }
             }
-            .cornerRadius(Constants.cornerRadius)
-            .padding(Constants.padding)
+            .cornerRadius(FurrowApp.Constants.cornerRadius)
+            .padding(FurrowApp.Constants.padding)
             
             Text("\(tile.identifier) - \(tile.variation)")
                 .font(.system(size: 10, weight: .regular))
-                .padding(Constants.edgeInsets)
+                .padding(FurrowApp.Constants.edgeInsets)
                 .foregroundColor(Color.black)
                 .background(Color.secondary)
-                .cornerRadius(Constants.cornerRadius)
-                .padding(.bottom, Constants.padding)
+                .cornerRadius(FurrowApp.Constants.cornerRadius)
+                .padding(.bottom, FurrowApp.Constants.padding)
         }
     }
 }

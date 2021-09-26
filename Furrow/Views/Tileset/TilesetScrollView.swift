@@ -9,50 +9,49 @@ import SwiftUI
 
 struct TilesetScrollView: View {
     
-    enum Constants {
-        
-        static let padding = 16.0
-        
-        static let minimumSize = 128.0
-        static let maximumSize = 512.0
-    }
-    
     @ObservedObject var model: AppViewModel
     
-    private let columns = [ GridItem(.adaptive(minimum: Constants.minimumSize, maximum: Constants.maximumSize)) ]
+    private let columns = [ GridItem(.adaptive(minimum: FurrowApp.Constants.minimumImageSize, maximum: FurrowApp.Constants.maximumImageSize)) ]
     
     var body: some View {
         
-        ScrollView {
+        if model.seasonalTiles.isEmpty {
             
-            LazyVGrid(columns: columns, spacing: Constants.padding) {
+            AddTilesView(model: model)
+        }
+        else {
+            
+            ScrollView {
                 
-                ForEach(model.seasonalTiles, id: \.self) { tile in
+                LazyVGrid(columns: columns, spacing: FurrowApp.Constants.padding * 2.0) {
                     
-                    TilesetScrollViewTile(tile: tile, material: model.material)
-                        .background(Color.secondary)
-                        .cornerRadius(8)
-                    .contextMenu {
+                    ForEach(model.seasonalTiles, id: \.self) { tile in
                         
-                        Text("\(tile.identifier) - \(tile.variation)")
-                        
-                        Divider()
-                        
-                        Button(action: {
-                        
-                            guard let tileset = model.tileset else { return }
+                        TilesetScrollViewTile(tile: tile, material: model.material)
+                            .background(Color.secondary)
+                            .cornerRadius(FurrowApp.Constants.cornerRadius)
+                        .contextMenu {
                             
-                            model.remove(tile: tile, from: tileset)
+                            Text("\(tile.identifier) - \(tile.variation)")
                             
-                        }) {
+                            Divider()
                             
-                            Label("Delete", systemImage: "trash")
-                                .help("Delete this tile variation")
+                            Button(action: {
+                            
+                                guard let tileset = model.tileset else { return }
+                                
+                                model.remove(tile: tile, from: tileset)
+                                
+                            }) {
+                                
+                                Label("Delete", systemImage: "trash")
+                                    .help("Delete this tile variation")
+                            }
                         }
                     }
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
     }
 }
