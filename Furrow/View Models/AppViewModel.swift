@@ -11,6 +11,14 @@ import SwiftUI
 
 class AppViewModel: ObservableObject {
     
+    enum ViewState {
+        
+        case idle
+        case importing
+        case exporting
+    }
+    
+    @Published var viewState: ViewState = .idle
     @Published var tileset: Tileset? = .surface(.grass)
     @Published var selectedTab: Tab = .tilemap
     @Published var season: Season = .spring
@@ -69,6 +77,8 @@ extension AppViewModel {
             
         case .OK:
             
+            viewState = .importing
+            
             switch tileset {
                 
             case .footpath:
@@ -87,6 +97,8 @@ extension AppViewModel {
                             guard let self = self else { return }
                             
                             self.tilemap.footpath.tiles.append(contentsOf: tiles)
+                            
+                            self.viewState = .idle
                         }
                     }
                 }
@@ -107,6 +119,8 @@ extension AppViewModel {
                             guard let self = self else { return }
                             
                             self.tilemap.surface.tiles.append(contentsOf: tiles)
+                            
+                            self.viewState = .idle
                         }
                     }
                 }

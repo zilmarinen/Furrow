@@ -13,15 +13,30 @@ struct TilesetView: View {
      
     var body: some View {
         
-        switch model.selectedTab {
+        switch model.viewState {
             
-        case .tilemap:
+        case .idle:
             
-            TilesetBlobView(model: model)
+            switch model.selectedTab {
+                
+            case .tilemap:
+                
+                TilesetBlobView(model: model)
+                
+            case .tileset:
+                
+                TilesetScrollView(model: model)
+            }
             
-        case .tileset:
+        case .importing:
             
-            TilesetScrollView(model: model)
+            ProgressView("Importing Tiles")
+                .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+            
+        case .exporting:
+            
+            ProgressView("Exporting Tilesets")
+                .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
         }
     }
 }
