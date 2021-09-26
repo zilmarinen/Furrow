@@ -13,33 +13,13 @@ struct TilesetScrollView: View {
         
         static let padding = 16.0
         
-        static let minimumWidth = 128.0
-        static let maximumWidth = 512.0
+        static let minimumSize = 128.0
+        static let maximumSize = 512.0
     }
     
     @ObservedObject var model: AppViewModel
     
-    private let tiles: [TilesetTile]
-    
-    private let columns = [ GridItem(.adaptive(minimum: Constants.minimumWidth, maximum: Constants.maximumWidth)) ]
-    
-    init(model: AppViewModel) {
-        
-        self.model = model
-        
-        switch model.tileset {
-            
-        case .footpath(let tileType):
-            
-            self.tiles = model.tilemap.footpath.tiles(with: model.season, tileType: tileType).sorted { $0.identifier < $1.identifier && $0.variation < $1.variation }
-            
-        case .surface(let overlay):
-            
-            self.tiles = model.tilemap.surface.tiles(with: model.season, overlay: overlay).sorted { $0.identifier < $1.identifier }
-            
-        default: self.tiles = []
-        }
-    }
+    private let columns = [ GridItem(.adaptive(minimum: Constants.minimumSize, maximum: Constants.maximumSize)) ]
     
     var body: some View {
         
@@ -47,10 +27,16 @@ struct TilesetScrollView: View {
             
             LazyVGrid(columns: columns, spacing: Constants.padding) {
                 
-                ForEach(tiles, id: \.self) { tile in
+                ForEach(model.seasonalTiles, id: \.self) { tile in
                     
                     TilesetScrollViewTile(tile: tile, material: model.material)
+                        .background(Color.secondary)
+                        .cornerRadius(8)
                     .contextMenu {
+                        
+                        Text("\(tile.identifier) - \(tile.variation)")
+                        
+                        Divider()
                         
                         Button(action: {
                         

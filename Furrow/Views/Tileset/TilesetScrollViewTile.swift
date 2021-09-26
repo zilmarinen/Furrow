@@ -15,8 +15,9 @@ struct TilesetScrollViewTile: View {
         static let imageSize = 128.0
         
         static let padding = 8.0
+        static let cornerRadius = 8.0
         
-        static let edgeInsets = EdgeInsets(top: 2, leading: Constants.padding, bottom: 2, trailing: Constants.padding)
+        static let edgeInsets = EdgeInsets(top: 2, leading: padding, bottom: 2, trailing: padding)
     }
     
     let tile: TilesetTile
@@ -44,16 +45,16 @@ struct TilesetScrollViewTile: View {
                         .frame(width: Constants.imageSize, height: Constants.imageSize)
                 }
             }
-            .cornerRadius(8)
-            .padding(.horizontal, Constants.padding)
+            .cornerRadius(Constants.cornerRadius)
+            .padding(Constants.padding)
             
             Text("\(tile.identifier) - \(tile.variation)")
                 .font(.system(size: 10, weight: .regular))
-                .foregroundColor(Color.black)
                 .padding(Constants.edgeInsets)
+                .foregroundColor(Color.black)
                 .background(Color.secondary)
-                .cornerRadius(8)
+                .cornerRadius(Constants.cornerRadius)
+                .padding(.bottom, Constants.padding)
         }
-        
     }
 }

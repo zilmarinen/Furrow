@@ -53,14 +53,3 @@ extension SurfaceTile {
                 lhs.variation == rhs.variation
     }
 }
-
-extension Array where Element == SurfaceTile {
-    
-    var blob: [Int : NSImage] {
-        
-        self.reduce(into: [Int : NSImage]()) { result, element in
-            
-            result[element.identifier] = element.image
-        }
-    }
-}

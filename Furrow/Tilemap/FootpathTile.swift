@@ -53,14 +53,3 @@ extension FootpathTile {
                 lhs.variation == rhs.variation
     }
 }
-
-extension Array where Element == FootpathTile {
-    
-    var blob: [Int : NSImage] {
-        
-        self.reduce(into: [Int : NSImage]()) { result, element in
-            
-            result[element.identifier] = element.image
-        }
-    }
-}

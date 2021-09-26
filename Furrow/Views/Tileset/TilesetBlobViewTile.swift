@@ -8,33 +8,30 @@ import SwiftUI
 
 struct TilesetBlobViewTile: View {
     
+    enum Constants {
+        
+        static let edgeInsets = EdgeInsets(top: 2, leading: 8, bottom: 2, trailing: 8)
+    }
+    
     let identifier: Int
-    let image: NSImage?
+    let image: NSImage
     @Binding var showIdentifier: Bool
     
     var body: some View {
         
         ZStack {
             
-            if let image = image {
-
-                Image(nsImage: image)
-                    .renderingMode(.original)
-                    .resizable()
-                    .frame(width: TilesetBlobView.Constants.imageSize, height: TilesetBlobView.Constants.imageSize)
-            }
-            else {
-
-                Color.clear
-                    .frame(width: TilesetBlobView.Constants.imageSize, height: TilesetBlobView.Constants.imageSize)
-            }
+            Image(nsImage: image)
+                .renderingMode(.original)
+                .resizable()
+                .aspectRatio(1, contentMode: .fit)
 
             if showIdentifier {
 
                 Text("\(identifier)")
                     .font(.system(size: 10, weight: .regular))
                     .foregroundColor(Color.black)
-                    .padding(TilesetBlobView.Constants.edgeInsets)
+                    .padding(Constants.edgeInsets)
                     .background(Color.secondary)
                     .cornerRadius(8)
             }

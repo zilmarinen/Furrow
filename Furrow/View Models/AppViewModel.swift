@@ -63,6 +63,27 @@ class AppViewModel: ObservableObject {
 
 extension AppViewModel {
     
+    var seasonalTiles: [TilesetTile] {
+        
+        switch tileset {
+            
+        case .footpath(let tileType): return tilemap.footpath.tiles(with: season, tileType: tileType)
+        case .surface(let overlay): return tilemap.surface.tiles(with: season, overlay: overlay)
+        default: return []
+        }
+    }
+    
+    var blobTiles: [Int: TilesetTile] {
+        
+        return seasonalTiles.reduce(into: [Int : TilesetTile]()) { result, element in
+            
+            result[element.identifier] = element
+        }
+    }
+}
+
+extension AppViewModel {
+    
     func add(tileset: Tileset) {
         
         let panel = NSOpenPanel()
