@@ -5,10 +5,11 @@
 //
 
 import Foundation
+import Harvest
 import Meadow
 import PeakOperation
 
-class TileEncodingOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
+class TileEncodingOperation<T: Harvest.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
     
     public var input: Result<([T], Data), Error> = Result { throw ResultError.noResult }
     public var output: Result<[String : FileWrapper], Error> = Result { throw ResultError.noResult }
@@ -36,7 +37,7 @@ class TileEncodingOperation<T: Meadow.TilesetTile>: ConcurrentOperation, Consume
             
             let tileData = try encoder.encode(tiles)
             
-            let tilemapFilename =  tileset + "_" + season.id.lowercased() + "_" + Document.Constants.Filename.tileset + "." + Document.Constants.FileFormat.png
+            let tilemapFilename =  tileset + "_" + season.id.lowercased() + "_" + Document.Constants.Filename.tileset + "." + Document.Constants.FileFormat.pdf
             let tilesetFilename = tileset + "_" + season.id.lowercased() + "_" + Document.Constants.Filename.tilemap + "." + Document.Constants.FileFormat.json
             
             wrappers[tilemapFilename] = FileWrapper(regularFileWithContents: imageData)

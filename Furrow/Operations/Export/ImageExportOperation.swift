@@ -13,10 +13,10 @@ class ImageExportOperation: ConcurrentOperation, ProducesResult {
     
     enum Constants {
         
-        static let canvasSize = 8192.0
+        static let canvasSize = 4096.0
         static let tileSize = 128.0
         
-        static let tilesPerRow = 64
+        static let tilesPerRow = 32
         
         static let uvStep = (1.0 / Double(tilesPerRow))
     }

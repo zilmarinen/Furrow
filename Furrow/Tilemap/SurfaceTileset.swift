@@ -43,7 +43,7 @@ class SurfaceTileset: ObservableObject {
             
             guard let data = tile.image.tiffRepresentation else { throw CocoaError(.fileReadCorruptFile) }
             
-            let filename = Document.Constants.Folder.surface + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.overlay.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.png
+            let filename = Document.Constants.Folder.surface + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.overlay.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.pdf
             
             wrappers[filename] = .init(regularFileWithContents: data)
         }

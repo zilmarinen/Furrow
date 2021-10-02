@@ -13,4 +13,5 @@ enum ImportError: Error {
 enum ExportError: Error {
     
     case missingFile
+    case invalidData
 }

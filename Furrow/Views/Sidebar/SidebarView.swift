@@ -16,7 +16,7 @@ struct SidebarView: View {
         List {
             
             Text("Footpath")
-                .font(.system(size: 11, weight: .semibold))
+                .font(.caption2)
                 .foregroundColor(.secondary)
             
             ForEach(FootpathTileType.allCases, id: \.self) { tileType in
@@ -28,7 +28,7 @@ struct SidebarView: View {
             }
             
             Text("Surface")
-                .font(.system(size: 11, weight: .semibold))
+                .font(.caption2)
                 .foregroundColor(.secondary)
             
             ForEach(SurfaceOverlay.allCases, id: \.self) { overlay in

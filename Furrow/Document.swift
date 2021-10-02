@@ -19,7 +19,7 @@ class Document: FileDocument, ObservableObject {
         enum FileFormat {
             
             static let json = "json"
-            static let png = "png"
+            static let pdf = "pdf"
         }
         
         enum Folder {

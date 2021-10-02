@@ -24,6 +24,7 @@
 		180B604426FCABB3005304D1 /* TilesetScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604326FCABB3005304D1 /* TilesetScrollView.swift */; };
 		180B604826FCBAC9005304D1 /* TilesetTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604726FCBAC9005304D1 /* TilesetTile.swift */; };
 		180B604A26FCC0CF005304D1 /* TilesetScrollViewTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */; };
+		18472F5C270888F500017BAF /* FocusedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18472F5B270888F500017BAF /* FocusedValues.swift */; };
 		18540B5726FC750100D5E874 /* SidebarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5626FC750100D5E874 /* SidebarItemView.swift */; };
 		18540B5A26FC753500D5E874 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5926FC753500D5E874 /* BadgeView.swift */; };
 		18540B5C26FC756400D5E874 /* SidebarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18540B5B26FC756400D5E874 /* SidebarItemModel.swift */; };
@@ -44,9 +45,12 @@
 		18598F1526FC685500A65A3B /* SurfaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1426FC685500A65A3B /* SurfaceTile.swift */; };
 		18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */; };
 		18598F1926FC6D6500A65A3B /* FootpathTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1826FC6D6500A65A3B /* FootpathTile.swift */; };
+		187CEA192703424A00506B05 /* Harvest in Frameworks */ = {isa = PBXBuildFile; productRef = 187CEA182703424A00506B05 /* Harvest */; };
+		187CEA1B2703589400506B05 /* PDFOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187CEA1A2703589400506B05 /* PDFOperation.swift */; };
 		187FE82E270090480026A4EB /* WriteOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE82D270090480026A4EB /* WriteOperation.swift */; };
 		187FE8302700AEE90026A4EB /* AddTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE82F2700AEE90026A4EB /* AddTilesView.swift */; };
 		187FE8322700B7080026A4EB /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FE8312700B7080026A4EB /* ButtonStyle.swift */; };
+		18A7E856270889EC00F65815 /* ExportCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A7E855270889EC00F65815 /* ExportCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,11 +70,12 @@
 		180B604326FCABB3005304D1 /* TilesetScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetScrollView.swift; sourceTree = "<group>"; };
 		180B604726FCBAC9005304D1 /* TilesetTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetTile.swift; sourceTree = "<group>"; };
 		180B604926FCC0CF005304D1 /* TilesetScrollViewTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesetScrollViewTile.swift; sourceTree = "<group>"; };
+		18472F5B270888F500017BAF /* FocusedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedValues.swift; sourceTree = "<group>"; };
 		18540B5626FC750100D5E874 /* SidebarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarItemView.swift; sourceTree = "<group>"; };
 		18540B5926FC753500D5E874 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		18540B5B26FC756400D5E874 /* SidebarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarItemModel.swift; sourceTree = "<group>"; };
 		18540B5D26FC758700D5E874 /* BadgeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeModel.swift; sourceTree = "<group>"; };
-		18540B6026FC75B600D5E874 /* TilesetBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TilesetBlobView.swift; path = Furrow/Views/Sidebar/TilesetBlobView.swift; sourceTree = SOURCE_ROOT; };
+		18540B6026FC75B600D5E874 /* TilesetBlobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TilesetBlobView.swift; path = Furrow/Views/Tileset/TilesetBlobView.swift; sourceTree = SOURCE_ROOT; };
 		1858157026FB554D00BEA637 /* Furrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Furrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1858157326FB554D00BEA637 /* FurrowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurrowApp.swift; sourceTree = "<group>"; };
 		1858157526FB554D00BEA637 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -89,9 +94,12 @@
 		18598F1426FC685500A65A3B /* SurfaceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTile.swift; sourceTree = "<group>"; };
 		18598F1626FC6D4C00A65A3B /* FootpathTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileset.swift; sourceTree = "<group>"; };
 		18598F1826FC6D6500A65A3B /* FootpathTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTile.swift; sourceTree = "<group>"; };
+		187CEA172703423F00506B05 /* Harvest */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Harvest; path = ../Harvest; sourceTree = "<group>"; };
+		187CEA1A2703589400506B05 /* PDFOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFOperation.swift; sourceTree = "<group>"; };
 		187FE82D270090480026A4EB /* WriteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteOperation.swift; sourceTree = "<group>"; };
 		187FE82F2700AEE90026A4EB /* AddTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTilesView.swift; sourceTree = "<group>"; };
 		187FE8312700B7080026A4EB /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		18A7E855270889EC00F65815 /* ExportCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187CEA192703424A00506B05 /* Harvest in Frameworks */,
 				18598F0726FB609D00A65A3B /* Meadow in Frameworks */,
 				180B603B26FC7E34005304D1 /* PeakOperation in Frameworks */,
 			);
@@ -125,6 +134,7 @@
 				1801DE6426FF54040047D10D /* ImageExportOperation.swift */,
 				1801DE6A26FF957D0047D10D /* TileEncodingOperation.swift */,
 				187FE82D270090480026A4EB /* WriteOperation.swift */,
+				187CEA1A2703589400506B05 /* PDFOperation.swift */,
 			);
 			path = Export;
 			sourceTree = "<group>";
@@ -171,6 +181,7 @@
 		1858156726FB554C00BEA637 = {
 			isa = PBXGroup;
 			children = (
+				187CEA172703423F00506B05 /* Harvest */,
 				18598F0426FB608800A65A3B /* Meadow */,
 				1858157226FB554D00BEA637 /* Furrow */,
 				1858157126FB554D00BEA637 /* Products */,
@@ -221,6 +232,7 @@
 				18540B5826FC752C00D5E874 /* Badge */,
 				18540B5526FC74F300D5E874 /* Sidebar */,
 				18540B5F26FC75A600D5E874 /* Tileset */,
+				18A7E855270889EC00F65815 /* ExportCommand.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,6 +252,7 @@
 				18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */,
 				1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */,
 				187FE8312700B7080026A4EB /* ButtonStyle.swift */,
+				18472F5B270888F500017BAF /* FocusedValues.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -278,6 +291,7 @@
 			packageProductDependencies = (
 				18598F0626FB609D00A65A3B /* Meadow */,
 				180B603A26FC7E34005304D1 /* PeakOperation */,
+				187CEA182703424A00506B05 /* Harvest */,
 			);
 			productName = Furrow;
 			productReference = 1858157026FB554D00BEA637 /* Furrow.app */;
@@ -338,6 +352,7 @@
 				18540B6126FC75B600D5E874 /* TilesetBlobView.swift in Sources */,
 				1801DE6926FF8B8E0047D10D /* TileExportOperation.swift in Sources */,
 				1801DE6326FF53780047D10D /* GenericTile.swift in Sources */,
+				18472F5C270888F500017BAF /* FocusedValues.swift in Sources */,
 				1858157426FB554D00BEA637 /* FurrowApp.swift in Sources */,
 				180B604A26FCC0CF005304D1 /* TilesetScrollViewTile.swift in Sources */,
 				187FE82E270090480026A4EB /* WriteOperation.swift in Sources */,
@@ -345,9 +360,11 @@
 				1801EA9D26FCE9A000E5CA86 /* Tileset.swift in Sources */,
 				1858158826FB559300BEA637 /* SidebarView.swift in Sources */,
 				18540B5726FC750100D5E874 /* SidebarItemView.swift in Sources */,
+				187CEA1B2703589400506B05 /* PDFOperation.swift in Sources */,
 				1801DE6126FF4F8A0047D10D /* TilesetExportOperation.swift in Sources */,
 				1858158C26FB5DDB00BEA637 /* AppViewModel.swift in Sources */,
 				1801DE5F26FE1A530047D10D /* TilemapExportOperation.swift in Sources */,
+				18A7E856270889EC00F65815 /* ExportCommand.swift in Sources */,
 				1801DE5926FDD67A0047D10D /* Tab.swift in Sources */,
 				18598F0A26FB653F00A65A3B /* SurfaceOverlay.swift in Sources */,
 				18598F1326FC67FA00A65A3B /* SurfaceTileset.swift in Sources */,
@@ -588,6 +605,10 @@
 		18598F0626FB609D00A65A3B /* Meadow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Meadow;
+		};
+		187CEA182703424A00506B05 /* Harvest */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Harvest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

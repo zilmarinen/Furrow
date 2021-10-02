@@ -43,7 +43,7 @@ class FootpathTileset: ObservableObject {
             
             guard let data = tile.image.tiffRepresentation else { throw CocoaError(.fileReadCorruptFile) }
             
-            let filename = Document.Constants.Folder.footpath + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.tileType.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.png
+            let filename = Document.Constants.Folder.footpath + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.tileType.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.pdf
             
             wrappers[filename] = .init(regularFileWithContents: data)
         }
