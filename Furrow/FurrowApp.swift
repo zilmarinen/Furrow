@@ -20,13 +20,12 @@ struct FurrowApp: App {
         static let edgeInsets = EdgeInsets(top: 2, leading: padding, bottom: 2, trailing: padding)
     }
     
-    let model = AppViewModel()
-    
     var body: some Scene {
         
-        DocumentGroup(newDocument: Document(model: model)) { file in
+        DocumentGroup(newDocument: Document(model: AppViewModel())) { file in
             
             AppView(document: file.document)
+                .focusedValue(\.document, file.$document)
         }
         .commands {
             
@@ -34,16 +33,7 @@ struct FurrowApp: App {
             
             CommandGroup(after: .saveItem) {
                 
-                Button(action: {
-                    
-                    model.export()
-                    
-                }, label: {
-                    
-                    Text("Export")
-                        .help("Export tilemap and tileset")
-                })
-                .keyboardShortcut("E")
+                ExportCommand()
             }
         }
     }
