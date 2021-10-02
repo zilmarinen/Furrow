@@ -6,10 +6,11 @@
 
 import AppKit
 import Foundation
+import Harvest
 import Meadow
 import PeakOperation
 
-class TilesetExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ProducesResult {
+class TilesetExportOperation<T: Harvest.TilesetTile>: ConcurrentOperation, ProducesResult {
     
     public var output: Result<(String, FileWrapper), Error> = Result { throw ResultError.noResult }
     
@@ -52,10 +53,13 @@ class TilesetExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, Produc
             group.enter()
             
             let imageOperation = ImageExportOperation(tiles: seasonalTiles)
+            let pdfOperation = PDFOperation()
             let tileOperation = TileExportOperation<T>()
             let encodingOperation = TileEncodingOperation<T>(season: season, tileset: tileset)
             
-            imageOperation.passesResult(to: tileOperation).passesResult(to: encodingOperation).enqueue(on: internalQueue) { result in
+            imageOperation.passesResult(to: pdfOperation)
+                .passesResult(to: tileOperation)
+                .passesResult(to: encodingOperation).enqueue(on: internalQueue) { result in
                 
                 self.dispatchQueue.async(flags: .barrier) {
                     

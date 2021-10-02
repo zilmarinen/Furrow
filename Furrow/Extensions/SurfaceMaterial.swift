@@ -9,5 +9,5 @@ import Meadow
 
 extension SurfaceMaterial {
     
-    var image: NSImage? { MDWImage.asset(named: "surface_\(id)", in: Map.bundle) }
+    var image: NSImage? { try? MDWImage.asset(named: "surface_\(id)", in: Map.bundle) }
 }

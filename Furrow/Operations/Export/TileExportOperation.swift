@@ -5,10 +5,11 @@
 //
 
 import Foundation
+import Harvest
 import Meadow
 import PeakOperation
 
-class TileExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
+class TileExportOperation<T: Harvest.TilesetTile>: ConcurrentOperation, ConsumesResult, ProducesResult {
     
     public var input: Result<([GenericTile], [UVs], Data), Error> = Result { throw ResultError.noResult }
     public var output: Result<([T], Data), Error> = Result { throw ResultError.noResult }
@@ -28,7 +29,7 @@ class TileExportOperation<T: Meadow.TilesetTile>: ConcurrentOperation, ConsumesR
                 let tile = tiles[index]
                 let uv = uvs[index]
                 
-                let result = try T(pattern: tile.identifier, season: tile.season, uvs: uv, rawType: tile.rawType)
+                let result = try T(pattern: tile.identifier, uvs: uv, rawType: tile.rawType)
                 
                 results.append(result)
             }
