@@ -11,7 +11,7 @@ enum Tileset: CaseIterable, Hashable, Identifiable {
     static var allCases: [Tileset] = [.footpath(.dirt),
                                       .surface(.grass)]
     
-    case footpath(FootpathTileType)
+    case footpath(FootpathMaterial)
     case surface(SurfaceOverlay)
     
     var id: String {

@@ -19,7 +19,7 @@ struct GenericTile {
         
         identifier = tile.identifier
         season = tile.season
-        rawType = tile.tileType.rawValue
+        rawType = tile.material.rawValue
         variation = tile.variation
         image = tile.image
     }

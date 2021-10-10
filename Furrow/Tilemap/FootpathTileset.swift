@@ -43,7 +43,7 @@ class FootpathTileset: ObservableObject {
             
             guard let data = tile.image.tiffRepresentation else { throw CocoaError(.fileReadCorruptFile) }
             
-            let filename = Document.Constants.Folder.footpath + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.tileType.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.pdf
+            let filename = Document.Constants.Folder.footpath + "_\(tile.identifier)_\(tile.season.rawValue)_\(tile.material.rawValue)_\(tile.variation)." + Document.Constants.FileFormat.pdf
             
             wrappers[filename] = .init(regularFileWithContents: data)
         }
@@ -54,13 +54,13 @@ class FootpathTileset: ObservableObject {
 
 extension FootpathTileset {
     
-    func tiles(with tileType: FootpathTileType) -> [FootpathTile] {
+    func tiles(with material: FootpathMaterial) -> [FootpathTile] {
         
-        return tiles.filter { $0.tileType == tileType }
+        return tiles.filter { $0.material == material }
     }
     
-    func tiles(with season: Season, tileType: FootpathTileType) -> [FootpathTile] {
+    func tiles(with season: Season, material: FootpathMaterial) -> [FootpathTile] {
         
-        return tiles.filter { $0.season == season && $0.tileType == tileType }
+        return tiles.filter { $0.season == season && $0.material == material }
     }
 }

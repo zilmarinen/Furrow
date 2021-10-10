@@ -17,7 +17,6 @@
 		1801DE6926FF8B8E0047D10D /* TileExportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6826FF8B8E0047D10D /* TileExportOperation.swift */; };
 		1801DE6B26FF957D0047D10D /* TileEncodingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801DE6A26FF957D0047D10D /* TileEncodingOperation.swift */; };
 		1801EA9D26FCE9A000E5CA86 /* Tileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801EA9C26FCE9A000E5CA86 /* Tileset.swift */; };
-		180B603B26FC7E34005304D1 /* PeakOperation in Frameworks */ = {isa = PBXBuildFile; productRef = 180B603A26FC7E34005304D1 /* PeakOperation */; };
 		180B603E26FC7E5F005304D1 /* TilesetImportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B603D26FC7E5F005304D1 /* TilesetImportOperation.swift */; };
 		180B604026FC89A4005304D1 /* TilesetTileImportOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B603F26FC89A4005304D1 /* TilesetTileImportOperation.swift */; };
 		180B604226FC95DE005304D1 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180B604126FC95DE005304D1 /* Error.swift */; };
@@ -39,7 +38,7 @@
 		1858158C26FB5DDB00BEA637 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1858158B26FB5DDB00BEA637 /* AppViewModel.swift */; };
 		18598F0726FB609D00A65A3B /* Meadow in Frameworks */ = {isa = PBXBuildFile; productRef = 18598F0626FB609D00A65A3B /* Meadow */; };
 		18598F0A26FB653F00A65A3B /* SurfaceOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */; };
-		18598F0C26FB6A4800A65A3B /* FootpathTileType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */; };
+		18598F0C26FB6A4800A65A3B /* FootpathMaterial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0B26FB6A4800A65A3B /* FootpathMaterial.swift */; };
 		18598F1026FC5A7300A65A3B /* Tilemap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F0F26FC5A7300A65A3B /* Tilemap.swift */; };
 		18598F1326FC67FA00A65A3B /* SurfaceTileset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1226FC67FA00A65A3B /* SurfaceTileset.swift */; };
 		18598F1526FC685500A65A3B /* SurfaceTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18598F1426FC685500A65A3B /* SurfaceTile.swift */; };
@@ -88,7 +87,7 @@
 		1858158B26FB5DDB00BEA637 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		18598F0426FB608800A65A3B /* Meadow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Meadow; path = ../Meadow; sourceTree = "<group>"; };
 		18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceOverlay.swift; sourceTree = "<group>"; };
-		18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathTileType.swift; sourceTree = "<group>"; };
+		18598F0B26FB6A4800A65A3B /* FootpathMaterial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootpathMaterial.swift; sourceTree = "<group>"; };
 		18598F0F26FC5A7300A65A3B /* Tilemap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tilemap.swift; sourceTree = "<group>"; };
 		18598F1226FC67FA00A65A3B /* SurfaceTileset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTileset.swift; sourceTree = "<group>"; };
 		18598F1426FC685500A65A3B /* SurfaceTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurfaceTile.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 			files = (
 				187CEA192703424A00506B05 /* Harvest in Frameworks */,
 				18598F0726FB609D00A65A3B /* Meadow in Frameworks */,
-				180B603B26FC7E34005304D1 /* PeakOperation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				180B604126FC95DE005304D1 /* Error.swift */,
-				18598F0B26FB6A4800A65A3B /* FootpathTileType.swift */,
+				18598F0B26FB6A4800A65A3B /* FootpathMaterial.swift */,
 				18598F0926FB653F00A65A3B /* SurfaceOverlay.swift */,
 				1801DE5C26FE05D60047D10D /* SurfaceMaterial.swift */,
 				187FE8312700B7080026A4EB /* ButtonStyle.swift */,
@@ -290,7 +288,6 @@
 			name = Furrow;
 			packageProductDependencies = (
 				18598F0626FB609D00A65A3B /* Meadow */,
-				180B603A26FC7E34005304D1 /* PeakOperation */,
 				187CEA182703424A00506B05 /* Harvest */,
 			);
 			productName = Furrow;
@@ -322,7 +319,6 @@
 			);
 			mainGroup = 1858156726FB554C00BEA637;
 			packageReferences = (
-				180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */,
 			);
 			productRefGroup = 1858157126FB554D00BEA637 /* Products */;
 			projectDirPath = "";
@@ -382,7 +378,7 @@
 				1858158A26FB564400BEA637 /* TilesetView.swift in Sources */,
 				1858157626FB554D00BEA637 /* Document.swift in Sources */,
 				180B604426FCABB3005304D1 /* TilesetScrollView.swift in Sources */,
-				18598F0C26FB6A4800A65A3B /* FootpathTileType.swift in Sources */,
+				18598F0C26FB6A4800A65A3B /* FootpathMaterial.swift in Sources */,
 				187FE8322700B7080026A4EB /* ButtonStyle.swift in Sources */,
 				1858157826FB554D00BEA637 /* AppView.swift in Sources */,
 				18598F1726FC6D4C00A65A3B /* FootpathTileset.swift in Sources */,
@@ -585,23 +581,7 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:3Squared/PeakOperation.git";
-			requirement = {
-				branch = feature/macos_compatability;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		180B603A26FC7E34005304D1 /* PeakOperation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 180B603926FC7E34005304D1 /* XCRemoteSwiftPackageReference "PeakOperation" */;
-			productName = PeakOperation;
-		};
 		18598F0626FB609D00A65A3B /* Meadow */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Meadow;

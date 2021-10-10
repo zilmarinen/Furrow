@@ -67,7 +67,7 @@ extension AppViewModel {
         
         switch tileset {
             
-        case .footpath(let tileType): return tilemap.footpath.tiles(with: season, tileType: tileType)
+        case .footpath(let material): return tilemap.footpath.tiles(with: season, material: material)
         case .surface(let overlay): return tilemap.surface.tiles(with: season, overlay: overlay)
         default: return []
         }

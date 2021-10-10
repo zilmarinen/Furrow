@@ -1,12 +1,12 @@
 //
-//  FootpathTileType.swift
+//  FootpathMaterial.swift
 //
 //  Created by Zack Brown on 22/09/2021.
 //
 
 import Meadow
 
-extension FootpathTileType {
+extension FootpathMaterial {
     
     var imageName: String {
         

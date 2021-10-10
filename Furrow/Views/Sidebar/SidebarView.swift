@@ -19,11 +19,11 @@ struct SidebarView: View {
                 .font(.caption2)
                 .foregroundColor(.secondary)
             
-            ForEach(FootpathTileType.allCases, id: \.self) { tileType in
+            ForEach(FootpathMaterial.allCases, id: \.self) { material in
                 
-                NavigationLink(destination: destinationView, tag: .footpath(tileType), selection: $model.tileset) {
+                NavigationLink(destination: destinationView, tag: .footpath(material), selection: $model.tileset) {
                     
-                    SidebarItemView(model: .init(title: tileType.id.capitalized, imageName: tileType.imageName, count: model.count(tileset: .footpath(tileType))))
+                    SidebarItemView(model: .init(title: material.id.capitalized, imageName: material.imageName, count: model.count(tileset: .footpath(material))))
                 }
             }
             

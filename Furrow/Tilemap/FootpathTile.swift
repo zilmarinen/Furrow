@@ -11,10 +11,10 @@ class FootpathTile: TilesetTile {
     
     enum CodingKeys: String, CodingKey {
             
-        case tileType
+        case material
     }
     
-    let tileType: FootpathTileType
+    let material: FootpathMaterial
     
     required init(filename: String, data: Data) throws {
         
@@ -25,10 +25,10 @@ class FootpathTile: TilesetTile {
               let tileTypeIdentifer = Int(components[3]),
               let variation = Int(components[4]),
               let season = Season(rawValue: seasonIdentifer),
-              let tileType = FootpathTileType(rawValue: tileTypeIdentifer),
+              let material = FootpathMaterial(rawValue: tileTypeIdentifer),
               let image = NSImage(data: data) else { throw CocoaError(.fileReadCorruptFile) }
         
-        self.tileType = tileType
+        self.material = material
         
         super.init(identifier: identifier, season: season, variation: variation, image: image)
     }
@@ -37,7 +37,7 @@ class FootpathTile: TilesetTile {
         
         var container = encoder.container(keyedBy: CodingKeys.self)
         
-        try container.encode(tileType, forKey: .tileType)
+        try container.encode(material, forKey: .material)
         
         try super.encode(to: encoder)
     }
@@ -49,7 +49,7 @@ extension FootpathTile {
         
         return  lhs.identifier == rhs.identifier &&
                 lhs.season == rhs.season &&
-                lhs.tileType == rhs.tileType &&
+                lhs.material == rhs.material &&
                 lhs.variation == rhs.variation
     }
 }
