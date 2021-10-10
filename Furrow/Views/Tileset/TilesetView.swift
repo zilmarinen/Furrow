@@ -28,15 +28,25 @@ struct TilesetView: View {
                 TilesetScrollView(model: model)
             }
             
-        case .importing:
+        case .importing(let progress):
             
-            ProgressView("Importing Tiles")
+            VStack {
+                        
+                Text("Importing Tiles")
+                
+                ProgressView(progress)
                 .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+            }
             
-        case .exporting:
+        case .exporting(let progress):
             
-            ProgressView("Exporting Tilesets")
+            VStack {
+                        
+                Text("Exporting Tilesets")
+                
+                ProgressView(progress)
                 .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
+            }
         }
     }
 }

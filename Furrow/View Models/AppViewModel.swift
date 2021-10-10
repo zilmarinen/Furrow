@@ -14,8 +14,8 @@ class AppViewModel: ObservableObject {
     enum ViewState {
         
         case idle
-        case importing
-        case exporting
+        case importing(progress: Progress)
+        case exporting(progress: Progress)
     }
     
     @Published var viewState: ViewState = .idle
@@ -107,15 +107,13 @@ extension AppViewModel {
             
         case .OK:
             
-            viewState = .importing
-            
             switch tileset {
                 
             case .footpath:
                 
                 let operation = TilesetImportOperation<FootpathTile>(urls: panel.urls, tiles: tilemap.footpath.tiles)
                 
-                operation.enqueue(on: operationQueue) { result in
+                let progress = operation.enqueueWithProgress(on: operationQueue) { result in
                     
                     switch result {
                         
@@ -133,11 +131,13 @@ extension AppViewModel {
                     }
                 }
                 
+                viewState = .importing(progress: progress)
+                
             case .surface:
                 
                 let operation = TilesetImportOperation<SurfaceTile>(urls: panel.urls, tiles: tilemap.surface.tiles)
                 
-                operation.enqueue(on: operationQueue) { result in
+                let progress = operation.enqueueWithProgress(on: operationQueue) { result in
                     
                     switch result {
                         
@@ -154,6 +154,8 @@ extension AppViewModel {
                         }
                     }
                 }
+                
+                viewState = .importing(progress: progress)
             }
             
         default: break
@@ -199,18 +201,10 @@ extension AppViewModel {
             
             guard let url = panel.url else { return }
             
-            viewState = .exporting
-            
             let exportOperation = TilemapExportOperation(url: url, tilemap: tilemap)
             let writeOperation = WriteOperation(url: url);
             
-            exportOperation.passesResult(to: writeOperation).enqueue(on: operationQueue) { result in
-                
-                switch result {
-                    
-                case .failure: break
-                case .success: break
-                }
+            let progress = exportOperation.passesResult(to: writeOperation).enqueueWithProgress(on: operationQueue) { result in
             
                 DispatchQueue.main.async { [weak self] in
                     
@@ -219,6 +213,8 @@ extension AppViewModel {
                     self.viewState = .idle
                 }
             }
+            
+            viewState = .exporting(progress: progress)
             
         default: break
         }

@@ -8,9 +8,7 @@ import SwiftUI
 
 struct ExportCommand: View {
     
-    @FocusedBinding(\.document)
-    
-    var document: Document?
+    @FocusedBinding(\.document) var document: Document?
     
     var body: some View {
         
