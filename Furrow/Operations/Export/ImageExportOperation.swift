@@ -16,7 +16,7 @@ class ImageExportOperation: ConcurrentOperation, ProducesResult {
         static let canvasSize = 4096.0
         static let tileSize = 128.0
         
-        static let tilesPerRow = 32
+        static let tilesPerRow = Int(canvasSize / tileSize)
         
         static let uvStep = (1.0 / Double(tilesPerRow))
     }
@@ -34,7 +34,7 @@ class ImageExportOperation: ConcurrentOperation, ProducesResult {
 
     override func execute() {
         
-        let canvasSize = NSSize(width: Constants.canvasSize / 2.0, height: Constants.canvasSize / 2.0)
+        let canvasSize = NSSize(width: Constants.canvasSize, height: Constants.canvasSize)
         
         let canvas = NSImage(size: canvasSize)
         

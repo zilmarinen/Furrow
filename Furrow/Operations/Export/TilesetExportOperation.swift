@@ -46,7 +46,7 @@ class TilesetExportOperation<T: Harvest.TilesetTile>: ConcurrentOperation, Produ
         
         for season in Season.allCases {
             
-            let seasonalTiles = tiles.filter { $0.season == season }
+            let seasonalTiles = tiles.filter { $0.season == season }.sorted { $0.identifier < $1.identifier }
             
             guard !seasonalTiles.isEmpty else { continue }
             
